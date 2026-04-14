@@ -1,11 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Vitória Amaral | Portfólio Tailwind</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8b5cf6', // O seu Roxo
+                        primaryHover: '#7c3aed',
+                        beige: '#F4F1EE',
+                        darkBeige: '#706ac5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .section-py { @apply py-[100px]; }
+            .badge-custom { @apply inline-block rounded-full px-3 py-1 text-sm font-semibold; }
+        }
+    </style>
+</head>
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300">
+
+    <nav class="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md py-4">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+            <a class="text-xl font-bold tracking-tight" href="#top">
+                <span class="text-primary">■</span> VITÓRIA AMARAL
+            </a>
+            
+            <div class="hidden lg:flex items-center gap-8 text-xs font-bold uppercase tracking-widest">
+                <a href="#sobre" class="hover:text-primary transition">Sobre</a>
+                <a href="#habilidades" class="hover:text-primary transition">Habilidades</a>
+                <a href="#projetos" class="hover:text-primary transition">Projetos</a>
+                <a href="#interesses" class="hover:text-primary transition">Interesses</a>
+                <a href="#contato" class="hover:text-primary transition">Contato</a>
+                <button id="themeToggle" class="ml-4 p-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                    <i id="themeIcon" class="fa-solid fa-moon text-primary"></i>
+                </button>
+            </div>
+            
+            <button class="lg:hidden p-2 text-primary text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header id="top" class="min-h-screen flex flex-col lg:flex-row">
+        <div class="lg:w-5/12 bg-beige dark:bg-indigo-950 flex items-center justify-center py-16 px-6">
+            <div class="bg-white dark:bg-slate-800 shadow-2xl p-10 text-center max-w-sm w-full border border-slate-100 dark:border-slate-700 rounded-sm">
+                <img src="../img/WhatsApp Image 2026-02-22 at 14.00.57.jpg" class="w-44 h-44 rounded-full mx-auto mb-6 object-cover border-4 border-primary" alt="Vitória Amaral">
+                <h2 class="font-bold text-2xl mb-2">Vitória Amaral</h2>
+                <p class="uppercase text-[10px] tracking-[0.3em] text-slate-500 dark:text-slate-400 font-bold mb-8">Ciência da Computação @ UFLA</p>
+                <div class="flex justify-center gap-5 text-xl pt-6 border-t border-slate-100 dark:border-slate-700">
+                    <a href="https://linkedin.com/in/vitoria-amaral23" target="_blank" class="hover:text-primary transition"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/vitoriaamarals" target="_blank" class="hover:text-primary transition"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:w-7/12 flex items-center p-10 lg:p-24 bg-slate-50 dark:bg-slate-900">
+            <div class="max-w-2xl">
+                <h1 class="text-7xl lg:text-9xl font-bold mb-4 tracking-tighter">Oi!</h1>
+                <h3 class="text-3xl font-light text-slate-500 dark:text-slate-400 mb-8">Eu sou a Vitória,</h3>
+                <p class="text-lg text-slate-600 dark:text-slate-300 mb-12 leading-relaxed">
+                    Graduanda em Ciência da Computação pela UFLA. 
+                    Tenho interesse em desenvolvimento de software, UX/UI, gestão de projetos e análise e implementação de requisitos. 
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projetos" class="bg-primary hover:bg-primaryHover text-white px-10 py-3 rounded-full font-bold shadow-lg transition transform hover:-translate-y-1">PROJETOS</a>
+                    <a href="#contato" class="bg-primary hover:bg-primaryHover text-white px-10 py-3 rounded-full font-bold shadow-lg transition transform hover:-translate-y-1">CONTATO</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre" class="section-py bg-white dark:bg-slate-900 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <div class="grid lg:grid-cols-12 gap-12">
+                    <div class="lg:col-span-8">
+                        <h2 class="text-4xl font-bold mb-8">Sobre</h2>
+                        <p class="text-xl mb-6 font-light">Curso Ciência da Computação na Universidade Federal de Lavras (UFLA), atualmente no 7º período.</p>
+                        <p class="text-slate-500 dark:text-slate-400 leading-relaxed text-lg">Participei da empresa júnior Emakers Jr., onde desenvolvi habilidades de UX/UI Design, Frontend, metodologias ágeis e trabalho em equipe. No núcleo de estudos GIRLs, apliquei conhecimentos em Dados e Inteligência Artificial. Hoje, foco minha trajetória em Gestão de Projetos e Metodologias Ágeis.</p>
+                    </div>
+                    <div class="lg:col-span-4">
+                        <div class="p-8 bg-slate-50 dark:bg-slate-800 border-l-4 border-primary rounded-xl shadow-sm">
+                            <h4 class="font-bold text-xs tracking-widest uppercase mb-6 text-slate-400">Infos</h4>
+                            <ul class="space-y-4 text-sm font-medium">
+                                <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-primary"></i> Lavras, MG</li>
+                                <li class="flex items-center gap-3"><i class="fa-solid fa-language text-primary"></i> Português (Nativo) / Inglês (Avançado)</li>
+                                <li class="flex items-center gap-3"><i class="fa-solid fa-laptop-code text-primary"></i> Dev Web & Gestão</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="section-py bg-slate-50 dark:bg-slate-800/50 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-4xl font-bold mb-12 text-center">Habilidades</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div>
+                        <h4 class="text-xl font-bold mb-6">Competências Técnicas</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge-custom bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200">HTML5</span>
+                            <span class="badge-custom bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200">CSS3 / Tailwind</span>
+                            <span class="badge-custom bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200">React / Angular</span>
+                            <span class="badge-custom bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200">Node.js</span>
+                            <span class="badge-custom bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-200">Python</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                        <h3 class="font-bold text-xs tracking-widest uppercase mb-6 text-slate-400">Fluxo de Trabalho & Ferramentas</h3>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-list-check text-primary"></i>
+                                <span class="text-sm font-bold">Jira / Trello</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-note-sticky text-primary"></i>
+                                <span class="text-sm font-bold">Notion</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-sync text-primary"></i>
+                                <span class="text-sm font-bold">Scrum / Agile</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-diagram-project text-primary"></i>
+                                <span class="text-sm font-bold">Git / GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="section-py bg-white dark:bg-slate-900 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <h2 class="text-4xl font-bold mb-12">Projetos</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition flex flex-col">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-primary mb-4">Sistemas Distribuídos</span>
+                        <h5 class="text-xl font-bold mb-4">Raízes do Café</h5>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">Sistema para análise de raízes de café utilizando processamento de imagens e LLMs para diagnósticos agrícolas.</p>
+                        <a href="https://github.com/LiHypnos/SD_Raizes_do_Cafe" target="_blank" class="text-sm font-bold hover:text-primary inline-flex items-center gap-2">Ver Repositório <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition flex flex-col">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-primary mb-4">Inteligência Artificial</span>
+                        <h5 class="text-xl font-bold mb-4">Algoritmos de IA</h5>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">Coleção de algoritmos clássicos e modernos em Python: buscas heurísticas, genéticos e agentes autônomos (AutoGen).</p>
+                        <a href="https://github.com/vitoriaamarals/Projetos-IA" target="_blank" class="text-sm font-bold hover:text-primary inline-flex items-center gap-2">Ver Repositório <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl transition flex flex-col">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-primary mb-4">Fullstack</span>
+                        <h5 class="text-xl font-bold mb-4">Gestão de Restaurante</h5>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-8 flex-grow">Sistema web completo com Node.js no backend e modelagem de banco de dados para gestão operacional.</p>
+                        <a href="https://github.com/vitoriaamarals/sistemaRestaurante" target="_blank" class="text-sm font-bold hover:text-primary inline-flex items-center gap-2">Ver Repositório <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interesses" class="section-py bg-slate-50 dark:bg-slate-800/50 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-8">Interesses</h2>
+                        <p class="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">Áreas que eu gosto de estudar e pesquisar para minha evolução profissional.</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-4 font-semibold"><i class="fa-solid fa-check text-primary"></i> Governança de TI e Gestão de Projetos</li>
+                            <li class="flex items-center gap-4 font-semibold"><i class="fa-solid fa-check text-primary"></i> Metodologias Ágeis (Scrum, Kanban)</li>
+                            <li class="flex items-center gap-4 font-semibold"><i class="fa-solid fa-check text-primary"></i> UX, UI e Design Thinking</li>
+                            <li class="flex items-center gap-4 font-semibold"><i class="fa-solid fa-check text-primary"></i> Inteligência Artificial e Dados</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white dark:bg-slate-800 p-10 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
+                        <h4 class="font-bold text-xs tracking-widest uppercase mb-6 text-slate-400">Atividades Acadêmicas</h4>
+                        <p class="text-sm text-slate-500 dark:text-slate-400 mb-8">Participei da comunidade acadêmica da UFLA em diferentes frentes:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge-custom border border-slate-200 dark:border-slate-700 text-xs"><i class="fa-solid fa-users text-primary mr-2"></i>Emakers Jr.</span>
+                            <span class="badge-custom border border-slate-200 dark:border-slate-700 text-xs"><i class="fa-solid fa-robot text-primary mr-2"></i>Núcleo GIRLs</span>
+                            <span class="badge-custom border border-slate-200 dark:border-slate-700 text-xs"><i class="fa-solid fa-lightbulb text-primary mr-2"></i>Projetos Práticos</span>
+                            <span class="badge-custom border border-slate-200 dark:border-slate-700 text-xs"><i class="fa-solid fa-graduation-cap text-primary mr-2"></i>Extensão (PIBEC)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section-py bg-white dark:bg-slate-900 px-6">
+            <div class="container mx-auto max-w-6xl">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-4">Contato</h2>
+                        <p class="text-slate-500 dark:text-slate-400">Como falar comigo!</p>
+                    </div>
+                    <div class="bg-slate-50 dark:bg-slate-800 p-10 rounded-2xl shadow-sm">
+                        <ul class="space-y-6">
+                            <li class="flex items-center gap-4">
+                                <i class="fa-solid fa-envelope text-primary text-xl"></i>
+                                <span class="font-medium">amaral.vitoriac@gmail.com</span>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <i class="fa-brands fa-github text-primary text-xl"></i>
+                                <a href="https://github.com/vitoriaamarals" target="_blank" class="font-medium hover:text-primary transition">github.com/vitoriaamarals</a>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <i class="fa-brands fa-linkedin text-primary text-xl"></i>
+                                <a href="https://linkedin.com/in/vitoria-amaral23" target="_blank" class="font-medium hover:text-primary transition">linkedin.com/in/vitoria-amaral23</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-6">
+        <div class="container mx-auto max-w-6xl flex flex-col md:flex-row justify-between items-center gap-6">
+            <small class="text-slate-400 font-medium">© <span id="year">2026</span> Vitória Christie Amaral Santos — Lavras/MG</small>
+            <small class="text-slate-400 font-medium">Feito com <i class="fa-solid fa-heart text-primary"></i> HTML5, Tailwind CSS e JS</small>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

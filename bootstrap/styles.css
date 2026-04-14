@@ -12,12 +12,10 @@ body {
 /* Ajuste de seções para Dark Mode */
 .py-100 { padding: 100px 0; }
 
-/* Navbar adaptativa */
 .navbar {
     border-bottom: 1px solid var(--bs-border-color) !important;
 }
 
-/* Cores Roxas */
 .text-primary { color: var(--primary-purple) !important; }
 .btn-primary { 
     background-color: var(--primary-purple); 
@@ -31,7 +29,7 @@ body {
 /* Hero Section */
 .bg-beige { background-color: var(--beige); }
 [data-bs-theme="dark"] .bg-beige { 
-    background-color: #706ac5 !important; /* Um tom de roxo bem escuro para o fundo do tema dark */
+    background-color: #161b33 !important; /* Um tom de roxo bem escuro para o fundo do tema dark */
 }
 
 .profile-card {
