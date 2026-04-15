@@ -55,9 +55,21 @@
                 </button>
             </div>
             
-            <button class="lg:hidden p-2 text-primary text-2xl">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <div class="flex items-center gap-2 lg:hidden">
+                <button id="themeToggleMobile" class="p-2 rounded-lg border border-slate-200 dark:border-slate-700">
+                    <i id="themeIconMobile" class="fa-solid fa-moon text-primary"></i>
+                </button>
+                <button id="menuBtn" class="p-2 text-primary text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden lg:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 p-4 space-y-4 text-xs font-bold uppercase tracking-widest">
+            <a href="#sobre" class="block hover:text-primary">Sobre</a>
+            <a href="#habilidades" class="block hover:text-primary">Habilidades</a>
+            <a href="#projetos" class="block hover:text-primary">Projetos</a>
+            <a href="#contato" class="block hover:text-primary">Contato</a>
         </div>
     </nav>
 
